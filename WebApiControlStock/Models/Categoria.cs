@@ -14,6 +14,6 @@ namespace WebApiControlStock.Models
         [Column(TypeName = "varchar(50)")]
         [Required]
         public string Nombre { get; set; }
-        public List<Categoria> Categorias { get; set; }
+        public List<Producto> Productos { get; set; }
     }
 }

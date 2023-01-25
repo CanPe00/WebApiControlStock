@@ -26,6 +26,7 @@ namespace WebApiControlStock
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc().AddNewtonsoftJson(o=>o.SerializerSettings.ReferenceLoopHandling=Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddDbContext<DBStockContext>(options => options.UseSqlServer(Configuration.GetConnectionString("KeyDB")));
             services.AddControllers();
         }

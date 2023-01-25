@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApiControlStock.Data;
 
 namespace WebApiControlStock.Migrations
 {
     [DbContext(typeof(DBStockContext))]
-    partial class DBStockContextModelSnapshot : ModelSnapshot
+    [Migration("20230125185153_act2")]
+    partial class act2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
